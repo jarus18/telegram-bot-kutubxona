@@ -96,7 +96,8 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 # --- Asosiy funksiya ---
 def main() -> None:
-    TOKEN = "8598309632:AAEihm3OI0I6V4lLFJx6I3s1ohH7TTIiXEE"  # @BotFather dan oling
+    import os
+TOKEN = os.environ.get("TOKEN")  # @BotFather dan oling
 
     app = Application.builder().token(TOKEN).build()
 
